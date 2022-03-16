@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Spartan:wght@200&display=swap');
+html,
+body {
+  background-color: rgb(40, 44, 52);
+  color: rgb(178, 185, 193);
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 30px;
+}
+a {
+  text-decoration: underline;
+}
