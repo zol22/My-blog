@@ -16,9 +16,9 @@ const Welcome = () => {
             <span className="font-bold underline  decoration-violet-500 decoration-4 underline-offset-4">
               Developer
             </span>{' '}
-            specializing in modern Javascript. I'm based in Florida. I do
-            believe that each day is a learning day so I decided to start a blog
-            to learn together.
+            specialized in modern Javascript. I'm based in Florida. I do believe
+            that each day is a learning day so I decided to start a blog to
+            learn together.
           </p>
           <div className="mt-2 flex justify-between pt-2">
             <Link href="/about">

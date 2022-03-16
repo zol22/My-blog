@@ -4,6 +4,7 @@ import { getPosts } from '../services'
 import { Edge } from '../types'
 import moment from 'moment'
 import { useState } from 'react'
+import Head from 'next/head'
 
 const Articles: NextPage<{ posts: Edge[] }> = ({ posts }) => {
   const [articles, setArticles] = useState(posts)
@@ -18,6 +19,14 @@ const Articles: NextPage<{ posts: Edge[] }> = ({ posts }) => {
   )
   return (
     <div className="h-screen">
+      <Head>
+        <title>Articles | Solange Ormeno </title>
+        <meta
+          name="viewport"
+          content="Tutorial, technical articles, snippets, reference materials and all development-related resources I've written"
+        />
+        <link rel="icon" href="/favicon.svg" />
+      </Head>
       <div className="mt-16 mb-10 flex justify-center">
         <h1 className="text-4xl">Articles</h1>
       </div>
@@ -34,9 +43,10 @@ const Articles: NextPage<{ posts: Edge[] }> = ({ posts }) => {
         ></input>
         <div>
           {' '}
-          {filterArticleList.map((post) => {
+          {filterArticleList.map((post, index) => {
             return (
               <div
+                key={index}
                 className="cursor-pointer  rounded p-2
               transition duration-700 hover:bg-neutral-800"
               >

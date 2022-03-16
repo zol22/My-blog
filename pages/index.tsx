@@ -10,8 +10,12 @@ const Home: NextPage<{ posts: DataRecentPost[] }> = ({ posts }) => {
   return (
     <div className="mx-auto mb-8 h-full max-w-3xl p-2">
       <Head>
-        <title>Solange Ormeno - Web developer</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Web developer | Solange Ormeno </title>
+        <meta
+          name="viewport"
+          content="Solange Ormeno is a full stack developer specialized in modern Javascript. In this, blog, she's sharing her knowledge as a developer"
+        />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
       <div>
         <div>

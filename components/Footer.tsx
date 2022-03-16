@@ -10,7 +10,7 @@ function Footer() {
         </div>
 
         <span className=" flex items-center text-sm">
-          <Link href="/">
+          <Link href="https://github.com/zol22/My-blog">
             <a
               className="flex no-underline  transition
     duration-500 hover:text-violet-300"

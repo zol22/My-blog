@@ -1,10 +1,19 @@
 import { NextPage } from 'next'
 import Link from 'next/link'
 import { FcImport } from 'react-icons/fc'
+import Head from 'next/head'
 
 const About: NextPage = () => {
   return (
     <div className="h-full p-2">
+      <Head>
+        <title>About me | Solange Ormeno</title>
+        <meta
+          name="viewport"
+          content=" My name is Solange! I'm a full stack developer. Finally, I decided to start documenting my learnings in a blog. My main goal is to share what I've learned, and what I'm learning currently as a developer."
+        />
+        <link rel="icon" href="/favicon.svg" />
+      </Head>
       <div className="mt-16 mb-10 flex flex-col items-center justify-center">
         <h1 className="font-spartan text-4xl">About me</h1>
         <p className="mt-3 text-gray-500">
