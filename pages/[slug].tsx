@@ -29,7 +29,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const posts = await getPosts()
   return {
     paths: posts.map(({ node: { slug } }: Edge) => ({ params: { slug } })),
-    fallback: true,
+    fallback: false,
   }
 }
 // Fetch data at build time
