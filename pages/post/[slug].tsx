@@ -12,7 +12,7 @@ interface IParams extends ParsedUrlQuery {
 const PostDetails: NextPage<{ post: Node }> = ({ post }) => {
   console.log(post)
   return (
-    <div className="h-full  p-4">
+    <div className="h-full p-4">
       <Head>
         <title>{post?.title}</title>
         <meta name="viewport" content={`${post?.title}`} />
