@@ -50,7 +50,7 @@ const Articles: NextPage<{ posts: Edge[] }> = ({ posts }) => {
                 className="cursor-pointer  rounded p-2
               transition duration-700 hover:bg-neutral-800"
               >
-                <Link href={`/post/${post.node.slug}`}>
+                <Link href={`post/${post.node.slug}`}>
                   <a className="flex justify-between no-underline">
                     <div>
                       <h1>{post.node.title}</h1>

@@ -82,10 +82,10 @@ const PostDetail = ({ post }: { post: Node }) => {
       /* TODO: This is rendering for every number list*/
       case 'numbered-list':
         return (
-          <ol key={index} className="ml-5 list-decimal">
+          <ol key={index} className="ml-5 mt-5 mb-5 list-decimal">
             {obj.children.map((eachChild: any) =>
               eachChild.children.map((oneChild: any, index: React.Key) => (
-                <li className="mb-6" key={index}>
+                <li key={index}>
                   {oneChild.children.map((one: any) => one.text)}
                 </li>
               ))
@@ -95,7 +95,7 @@ const PostDetail = ({ post }: { post: Node }) => {
       /* TODO: This is rendering for every number list*/
       case 'bulleted-list':
         return (
-          <ul key={index} className="ml-5 list-disc">
+          <ul key={index} className="ml-5 mt-5 mb-5 list-disc">
             {obj.children.map((eachChild: any) =>
               eachChild.children.map((oneChild: any, index: React.Key) => (
                 <li key={index}>
