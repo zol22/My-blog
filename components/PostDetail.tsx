@@ -12,6 +12,7 @@ const PostDetail = ({ post }: { post: Node }) => {
   ) => {
     let modifiedText = text
 
+    // About the children array
     /* TODO: Tell obj is type PurpleChild here */
     if (obj) {
       if (obj.bold) {
@@ -36,10 +37,11 @@ const PostDetail = ({ post }: { post: Node }) => {
           </u>
         )
       }
+
       if (obj.href !== undefined) {
         modifiedText = (
           <Link key={index} href={obj.href}>
-            <a className="font-bold text-gray-200 decoration-violet-500 decoration-2 underline-offset-4 hover:text-yellow-200">
+            <a className="text-lg font-bold text-gray-200 decoration-violet-500 decoration-2 underline-offset-4 hover:bg-violet-500">
               {obj.children[0].text}
             </a>
           </Link>
@@ -47,6 +49,7 @@ const PostDetail = ({ post }: { post: Node }) => {
       }
     }
 
+    // About the types
     switch (type) {
       /* TODO: Tell modifiedText is type PurpleChildArray for mapping */
 
@@ -56,7 +59,7 @@ const PostDetail = ({ post }: { post: Node }) => {
         return (
           <h3 key={index} className="mb-4 text-xl font-semibold">
             {modifiedText.map((item: any, i: React.Key) => (
-              <React.Fragment key={i}>{item as PurpleChild}</React.Fragment>
+              <React.Fragment key={i}>{item}</React.Fragment>
             ))}
           </h3>
         )
@@ -76,6 +79,32 @@ const PostDetail = ({ post }: { post: Node }) => {
             ))}
           </h4>
         )
+      /* TODO: This is rendering for every number list*/
+      case 'numbered-list':
+        return (
+          <ol key={index} className="ml-5 list-decimal">
+            {obj.children.map((eachChild: any) =>
+              eachChild.children.map((oneChild: any, index: React.Key) => (
+                <li className="mb-6" key={index}>
+                  {oneChild.children.map((one: any) => one.text)}
+                </li>
+              ))
+            )}
+          </ol>
+        )
+      /* TODO: This is rendering for every number list*/
+      case 'bulleted-list':
+        return (
+          <ul key={index} className="ml-5 list-disc">
+            {obj.children.map((eachChild: any) =>
+              eachChild.children.map((oneChild: any, index: React.Key) => (
+                <li key={index}>
+                  {oneChild.children.map((one: any) => one.text)}
+                </li>
+              ))
+            )}
+          </ul>
+        )
       case 'image':
         return (
           <img
@@ -92,12 +121,19 @@ const PostDetail = ({ post }: { post: Node }) => {
   }
 
   return (
-    <div>
-      <p>
-        Written by {post.author.name} on{' '}
-        {moment(post.createdAt).format('MMM DD, YYYY')}
-      </p>
-      <h1>{post.title}</h1>
+    <div className="h-full">
+      <div className="mt-16 mb-10 flex flex-col items-center justify-center">
+        <p className="mb-8 text-sm text-gray-500">
+          Written by{' '}
+          <Link href="/about">
+            <a className="font-bold text-gray-200 decoration-violet-500 decoration-2 underline-offset-4 hover:bg-violet-500">
+              {post.author.name}
+            </a>
+          </Link>{' '}
+          on {moment(post.createdAt).format('MMM DD, YYYY')}
+        </p>
+        <h1 className="text-4xl text-gray-200">{post.title}</h1>
+      </div>
       {post.content.raw.children.map((typeObj: RawChild, index) => {
         const children = typeObj.children.map((item, itemindex) =>
           getContentFragment(itemindex, item.text, item)
