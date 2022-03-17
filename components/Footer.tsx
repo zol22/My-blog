@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 function Footer() {
   return (
-    <div className="h-full w-full bg-neutral-900">
+    <div className="w-full bg-neutral-900">
       <div className="flex h-32 flex-col items-center justify-center">
         <div className="mb-5">
           <p className="text-sm">Made by Solange Ormeno</p>

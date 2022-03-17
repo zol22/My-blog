@@ -6,11 +6,11 @@ import { BsEmojiSunglasses } from 'react-icons/bs'
 const Welcome = () => {
   return (
     <div className="mb-20 mt-16 w-full">
-      <div className="grid grid-cols-1 gap-3 p-2 md:grid-cols-5">
-        <div className="col-span-4">
+      <div className="grid gap-3 p-2 lg:grid-cols-5">
+        <div className="lg:col-span-4">
           {' '}
-          <h1 className="mb-3 text-4xl font-bold">Hi, I'm Solange.</h1>
-          <p className="pr-5 leading-loose">
+          <h1 className="mb-3 text-3xl font-bold">Hi, I'm Solange.</h1>
+          <p className="pr-5 text-base leading-loose">
             {' '}
             I'm a Full Stack{' '}
             <span className="font-bold underline  decoration-violet-500 decoration-4 underline-offset-4">

@@ -18,13 +18,17 @@ const Articles: NextPage<{ posts: Edge[] }> = ({ posts }) => {
     article.node.title.toLocaleLowerCase().includes(input.toLocaleLowerCase())
   )
   return (
-    <div className="h-screen">
+    <div className="h-screen p-5">
       <Head>
         <title>Articles | Solange Ormeno </title>
         <meta
           name="viewport"
           content="Tutorial, technical articles, snippets, reference materials and all development-related resources I've written"
         />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <div className="mt-16 mb-10 flex justify-center">
@@ -50,7 +54,7 @@ const Articles: NextPage<{ posts: Edge[] }> = ({ posts }) => {
                 className="cursor-pointer  rounded p-2
               transition duration-700 hover:bg-neutral-800"
               >
-                <Link href={`post/${post.node.slug}`}>
+                <Link href={`/post/${post.node.slug}`}>
                   <a className="flex justify-between no-underline">
                     <div>
                       <h1>{post.node.title}</h1>

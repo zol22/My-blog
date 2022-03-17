@@ -12,10 +12,14 @@ interface IParams extends ParsedUrlQuery {
 const PostDetails: NextPage<{ post: Node }> = ({ post }) => {
   console.log(post)
   return (
-    <div className="h-full p-4">
+    <div className="h-full p-5">
       <Head>
         <title>{post?.title}</title>
         <meta name="viewport" content={`${post?.title}`} />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <div className="mx-auto mt-16 max-w-3xl ">

@@ -5,13 +5,17 @@ import Head from 'next/head'
 
 const About: NextPage = () => {
   return (
-    <div className="h-full p-2">
+    <div className="h-full p-5">
       <Head>
         <title>About me | Solange Ormeno</title>
         <meta
           name="viewport"
           content=" My name is Solange! I'm a full stack developer. Finally, I decided to start documenting my learnings in a blog. My main goal is to share what I've learned, and what I'm learning currently as a developer."
         />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <div className="mt-16 mb-10 flex flex-col items-center justify-center">
