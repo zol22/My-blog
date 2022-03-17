@@ -7,7 +7,7 @@ import { DataRecentPost } from '../types'
 
 const Home: NextPage<{ posts: DataRecentPost[] }> = ({ posts }) => {
   return (
-    <div className="mx-auto mb-8 h-full max-w-3xl p-2">
+    <div className="mx-auto mb-8 h-screen max-w-3xl p-2">
       <Head>
         <title>Web developer | Solange Ormeno </title>
         <meta

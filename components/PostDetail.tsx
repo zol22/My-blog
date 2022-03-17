@@ -3,7 +3,6 @@ import { Node, PurpleChild, PurpleChildArray, RawChild } from '../types'
 import moment from 'moment'
 import Link from 'next/link'
 import { RichText } from '@graphcms/rich-text-react-renderer'
-import { textContent } from 'domutils'
 import Image from 'next/image'
 
 const PostDetail = ({ post }: { post: Node }) => {
