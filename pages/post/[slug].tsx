@@ -1,9 +1,9 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Link from 'next/link'
-import { getPosts, getPostDetails } from '../services'
-import { PostDetail } from '../components'
+import { getPosts, getPostDetails } from '../../services'
+import { PostDetail } from '../../components'
 import { ParsedUrlQuery } from 'querystring'
-import { Edge, Node } from '../types'
+import { Edge, Node } from '../../types'
 import Head from 'next/head'
 
 interface IParams extends ParsedUrlQuery {

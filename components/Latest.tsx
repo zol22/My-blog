@@ -9,7 +9,7 @@ const Latest = ({ post }: { post: DataRecentPost }) => {
       className="cursor-pointer  rounded p-2
     transition duration-700 hover:bg-neutral-800"
     >
-      <Link href={`${post.slug}`}>
+      <Link href={`post/${post.slug}`}>
         <a className="flex justify-between no-underline">
           <div>
             <h1>{post.title}</h1>
