@@ -14,8 +14,8 @@ const PostDetails: NextPage<{ post: Node }> = ({ post }) => {
   return (
     <div className="h-full  p-4">
       <Head>
-        <title>{post && post.title}</title>
-        <meta name="viewport" content={`${post && post.title}`} />
+        <title>{post?.title}</title>
+        <meta name="viewport" content={`${post?.title}`} />
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <div className="mx-auto mt-16 max-w-3xl ">
