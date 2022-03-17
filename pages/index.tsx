@@ -6,7 +6,6 @@ import { getRecentPosts } from '../services'
 import { DataRecentPost } from '../types'
 
 const Home: NextPage<{ posts: DataRecentPost[] }> = ({ posts }) => {
-  console.log(posts)
   return (
     <div className="mx-auto mb-8 h-full max-w-3xl p-2">
       <Head>

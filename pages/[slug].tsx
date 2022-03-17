@@ -10,14 +10,12 @@ interface IParams extends ParsedUrlQuery {
   slug: string
 }
 const PostDetails: NextPage<{ post: Node }> = ({ post }) => {
+  console.log(post)
   return (
     <div className="h-full  p-4">
       <Head>
-        <title>{post.title}</title>
-        <meta
-          name="viewport"
-          content={`${post.title} | ${post.slug} written by ${post.author.name}`}
-        />
+        <title>{post && post.title}</title>
+        <meta name="viewport" content={`${post && post.title}`} />
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <div className="mx-auto mt-16 max-w-3xl ">

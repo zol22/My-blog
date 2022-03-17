@@ -127,14 +127,14 @@ const PostDetail = ({ post }: { post: Node }) => {
           Written by{' '}
           <Link href="/about">
             <a className="font-bold text-gray-200 decoration-violet-500 decoration-2 underline-offset-4 hover:bg-violet-500">
-              {post.author.name}
+              {post && post.author.name}
             </a>
           </Link>{' '}
-          on {moment(post.createdAt).format('MMM DD, YYYY')}
+          on {moment(post?.createdAt).format('MMM DD, YYYY')}
         </p>
-        <h1 className="text-4xl text-gray-200">{post.title}</h1>
+        <h1 className="text-4xl text-gray-200">{post && post.title}</h1>
       </div>
-      {post.content.raw.children.map((typeObj: RawChild, index) => {
+      {post?.content.raw.children.map((typeObj: RawChild, index) => {
         const children = typeObj.children.map((item, itemindex) =>
           getContentFragment(itemindex, item.text, item)
         )
