@@ -3,6 +3,8 @@ import { Node, PurpleChild, PurpleChildArray, RawChild } from '../types'
 import moment from 'moment'
 import Link from 'next/link'
 import { RichText } from '@graphcms/rich-text-react-renderer'
+import { RichTextContent } from '@graphcms/rich-text-types'
+
 import Image from 'next/image'
 
 const PostDetail = ({ post }: { post: Node }) => {
@@ -142,7 +144,7 @@ const PostDetail = ({ post }: { post: Node }) => {
         return getContentFragment(index, children, typeObj, typeObj.type)
       })*/}
       <RichText
-        content={post?.content.raw.children as any}
+        content={post?.content.raw.children as RichTextContent}
         renderers={{
           h1: ({ children }) => (
             <h1 className="text-3xl text-gray-200 ">{children}</h1>
