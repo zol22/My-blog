@@ -169,7 +169,7 @@ const PostDetail = ({ post }: { post: Node }) => {
             <ul className="ml-5 mt-8 mb-5 list-disc">{children}</ul>
           ),
           ol: ({ children }) => (
-            <ol className="ml-5 mt-5 mb-5 list-decimal">{children}</ol>
+            <ol className="ml-5 mt-8 mb-5 list-decimal">{children}</ol>
           ),
           blockquote: ({ children }) => (
             <blockquote className="mt-4 mb-4 ml-5  border-l-2 border-gray-700 p-2 italic">
