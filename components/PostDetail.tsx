@@ -166,7 +166,7 @@ const PostDetail = ({ post }: { post: Node }) => {
             <strong className="text-gray-200">{children}</strong>
           ),
           ul: ({ children }) => (
-            <ul className="ml-5 mt-5 mb-5 list-disc">{children}</ul>
+            <ul className="ml-5 mt-8 mb-5 list-disc">{children}</ul>
           ),
           ol: ({ children }) => (
             <ol className="ml-5 mt-5 mb-5 list-decimal">{children}</ol>
@@ -177,7 +177,7 @@ const PostDetail = ({ post }: { post: Node }) => {
             </blockquote>
           ),
           code: ({ children }) => (
-            <code className="mt-5 mb-14  bg-gray-800 p-2">{children}</code>
+            <code className="mt-5 mb-5  bg-gray-800 p-2">{children}</code>
           ),
           img: (
             { src, altText, height, width } // images like screenshots
