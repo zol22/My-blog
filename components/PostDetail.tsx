@@ -1,5 +1,5 @@
 import React from 'react'
-import { Node, PurpleChild, PurpleChildArray, RawChild } from '../types'
+import { Node } from '../types'
 import moment from 'moment'
 import Link from 'next/link'
 import { RichText } from '@graphcms/rich-text-react-renderer'
