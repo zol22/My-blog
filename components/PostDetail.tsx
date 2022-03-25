@@ -177,7 +177,9 @@ const PostDetail = ({ post }: { post: Node }) => {
             </blockquote>
           ),
           code: ({ children }) => (
-            <code className="mt-5 mb-5  bg-gray-800 p-2">{children}</code>
+            <code className="mt-5 mb-5 bg-gray-800 p-2 font-bold">
+              {children}
+            </code>
           ),
           img: (
             { src, altText, height, width } // images like screenshots
