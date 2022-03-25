@@ -179,7 +179,9 @@ const PostDetail = ({ post }: { post: Node }) => {
           code: ({ children }) => (
             <code className="mt-5 mb-14  bg-gray-800 p-2">{children}</code>
           ),
-          img: ({ src, altText, height, width }) => (
+          img: (
+            { src, altText, height, width } // images like screenshots
+          ) => (
             <Image
               src={src!}
               alt={altText}
