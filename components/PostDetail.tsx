@@ -171,6 +171,7 @@ const PostDetail = ({ post }: { post: Node }) => {
           ol: ({ children }) => (
             <ol className="ml-5 mt-8 mb-5 list-decimal">{children}</ol>
           ),
+          li: ({ children }) => <li className="mt-5 mb-5 ">{children}</li>,
           blockquote: ({ children }) => (
             <blockquote className="mt-4 mb-4 ml-5  border-l-2 border-gray-700 p-2 italic">
               {children}
