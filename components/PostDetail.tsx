@@ -152,6 +152,7 @@ const PostDetail = ({ post }: { post: Node }) => {
           h2: ({ children }) => (
             <h1 className="text-2xl text-gray-200 ">{children}</h1>
           ),
+          p: ({ children }) => <p className="mt-3 mb-3 ">{children}</p>,
           a: ({ children, openInNewTab, href, rel }) => (
             <a
               href={href}
