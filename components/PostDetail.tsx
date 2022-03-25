@@ -22,7 +22,13 @@ const PostDetail = ({ post }: { post: Node }) => {
         </p>
         <h1 className="text-4xl text-gray-200">{post && post.title}</h1>
       </div>
+      {/*post?.content.raw.children.map((typeObj: RawChild, index) => {
+        const children = typeObj.children.map((item, itemindex) =>
+          getContentFragment(itemindex, item.text, item)
+        )
 
+        return getContentFragment(index, children, typeObj, typeObj.type)
+      })*/}
       <RichText
         content={post?.content.raw.children as RichTextContent}
         renderers={{
