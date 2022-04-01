@@ -12,7 +12,7 @@ const Latest = ({ post }: { post: DataRecentPost }) => {
       <Link href={`/articles/${post.slug}`}>
         <a className="flex justify-between no-underline">
           <div>
-            <h1 className="text-lg">{post.title}</h1>
+            <h2 className="text-lg">{post.title}</h2>
           </div>
           <div>
             <p className="text-lg text-gray-500">
