@@ -5,6 +5,7 @@ import { Latest, Welcome } from '../components'
 import { getRecentPosts } from '../services'
 import { DataRecentPost } from '../types'
 
+/* Index page */
 const Home: NextPage<{ posts: DataRecentPost[] }> = ({ posts }) => {
   return (
     <div className="mx-auto mb-8 h-full max-w-full p-5 lg:max-w-3xl lg:p-2 ">
