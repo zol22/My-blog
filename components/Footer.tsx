@@ -1,6 +1,7 @@
 import { FaGithubAlt } from 'react-icons/fa'
 import Link from 'next/link'
 
+/* Footer */
 function Footer() {
   return (
     <div className="w-full bg-neutral-900">
