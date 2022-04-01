@@ -7,6 +7,7 @@ import { Edge, Node } from '../../types'
 import Head from 'next/head'
 
 interface IParams extends ParsedUrlQuery {
+  // parameter
   slug: string
 }
 const PostDetails: NextPage<{ post: Node }> = ({ post }) => {
